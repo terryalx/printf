@@ -5,6 +5,7 @@
  * @c: char type
  * @buffer: Buffer
  * @flags: active flags.
+ *
  * @width: width.
  * @precision: precision
  * @size: Size -> specifier
