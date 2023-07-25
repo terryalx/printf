@@ -9,10 +9,10 @@
 int _printf(const char *format, ...)
 {
 	int i;
-	int input_char = 0; 
+	int input_char = 0;
 	int output_char = 0;
 	int flags, width, precision, size, buff_ind = 0;
-	
+
 	va_list list;
 	char buffer[BUFF_SIZE];
 
@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 			size = get_size(format, &i);
 			++i;
 			input_char = handle_print(format, &i, list, buffer,
-				flags, width, precision, size);
+					flags, width, precision, size);
 			if (input_char == -1)
 				return (-1);
 			output_char += input_char;
