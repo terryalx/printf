@@ -11,7 +11,8 @@
  * Return: Characters
  */
 
-int print_non_printable(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_non_printable(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 {
 	int i = 0;
 	int cuurent_nm = 0;

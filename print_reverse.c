@@ -11,7 +11,8 @@
  * Return: Numbers of chars printed
  */
 
-int print_reverse(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_reverse(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 {
 	char *str;
 	int i;

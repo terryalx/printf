@@ -11,7 +11,8 @@
  * Return: Character
  */
 
-int print_octal(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_octal(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 {
 
 	int i = BUFF_SIZE - 2;

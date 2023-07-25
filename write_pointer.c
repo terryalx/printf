@@ -13,7 +13,8 @@
  * Return: Characters
  */
 
-int write_pointer(char buffer[], int ind, int length, int width, int flags, char padd, char extra_c, int padd_start)
+int write_pointer(char buffer[], int ind, int length, int width,
+	int flags, char padd, char extra_c, int padd_start)
 {
 	int i;
 

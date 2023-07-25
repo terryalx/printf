@@ -11,7 +11,8 @@
  * Return: Number of chars printed.
  */
 
-int print_pointer(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_pointer(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 {
 	char extra_c = 0, padd = ' ';
 	int in_add = BUFF_SIZE - 2, length = 2, padd_start = 1;
@@ -46,5 +47,6 @@ int print_pointer(va_list types, char buffer[], int flags, int width, int precis
 
 	in_add++;
 
-	return (write_pointer(buffer, in_add, length, width, flags, padd, extra_c, padd_start));
+	return (write_pointer(buffer, in_add, length,
+	width, flags, padd, extra_c, padd_start));
 }

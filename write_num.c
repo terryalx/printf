@@ -13,7 +13,8 @@
  * Return: Characters
  */
 
-int write_num(int ind, char buffer[], int flags, int width, int prec, int length, char padd, char extra_c)
+int write_num(int ind, char buffer[], int flags, int width,
+	int prec, int length, char padd, char extra_c)
 {
 	int i, start_padd = 1;
 
