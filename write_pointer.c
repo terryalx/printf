@@ -45,7 +45,7 @@ int write_pointer(char buffer[], int ind, int length, int width, int flags, char
 			buffer[1] = '0';
 			buffer[2] = 'x';
 			return (write(1, &buffer[padd_start], i - padd_start) +
-				write(1, &buffer[ind], length - (1 - padd_start) - 2));
+					write(1, &buffer[ind], length - (1 - padd_start) - 2));
 		}
 	}
 	buffer[--ind] = 'x';

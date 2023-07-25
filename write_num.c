@@ -49,7 +49,7 @@ int write_num(int ind, char buffer[], int flags, int width, int prec, int length
 			if (extra_c)
 				buffer[--start_padd] = extra_c;
 			return (write(1, &buffer[start_padd], i - start_padd) +
-				write(1, &buffer[ind], length - (1 - start_padd)));
+					write(1, &buffer[ind], length - (1 - start_padd)));
 		}
 	}
 	if (extra_c)

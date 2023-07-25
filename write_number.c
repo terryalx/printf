@@ -29,5 +29,5 @@ int write_number(int is_negative, int ind, char buffer[], int flags, int width, 
 		extra_ch = ' ';
 
 	return (write_num(ind, buffer, flags, width, precision,
-		length, padd, extra_ch));
+				length, padd, extra_ch));
 }
