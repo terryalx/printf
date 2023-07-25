@@ -11,7 +11,8 @@
  * Return: count
  */
 
-int print_binary(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_binary(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
 {
 	unsigned int nb, mb, i, c_sum;
 	unsigned int a[32];
