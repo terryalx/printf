@@ -1,13 +1,18 @@
 #include "main.h"
+
 /**
  * _printf -> Printf function
- * @format: format.
+ * @format: format
  * Return: Printed characters
  */
+
 int _printf(const char *format, ...)
 {
-	int i, printed = 0, printed_chars = 0;
+	int i;
+	int input_char = 0; 
+	int output_char = 0;
 	int flags, width, precision, size, buff_ind = 0;
+	
 	va_list list;
 	char buffer[BUFF_SIZE];
 
@@ -23,8 +28,7 @@ int _printf(const char *format, ...)
 			buffer[buff_ind++] = format[i];
 			if (buff_ind == BUFF_SIZE)
 				print_buffer(buffer, &buff_ind);
-			/* write(1, &format[i], 1);*/
-			printed_chars++;
+			output_char++;
 		}
 		else
 		{
@@ -34,11 +38,11 @@ int _printf(const char *format, ...)
 			precision = get_precision(format, &i, list);
 			size = get_size(format, &i);
 			++i;
-			printed = handle_print(format, &i, list, buffer,
+			input_char = handle_print(format, &i, list, buffer,
 				flags, width, precision, size);
-			if (printed == -1)
+			if (input_char == -1)
 				return (-1);
-			printed_chars += printed;
+			output_char += input_char;
 		}
 	}
 
@@ -46,5 +50,5 @@ int _printf(const char *format, ...)
 
 	va_end(list);
 
-	return (printed_chars);
+	return (output_char);
 }
