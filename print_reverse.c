@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_reverse - Prints reverse string.
  * @types: Lista of arguments
@@ -10,11 +11,11 @@
  * Return: Numbers of chars printed
  */
 
-int print_reverse(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
+int print_reverse(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
 	char *str;
-	int i, count = 0;
+	int i;
+	int count = 0;
 
 	UNUSED(buffer);
 	UNUSED(flags);
@@ -39,5 +40,6 @@ int print_reverse(va_list types, char buffer[],
 		write(1, &z, 1);
 		count++;
 	}
+
 	return (count);
 }

@@ -1,18 +1,20 @@
 #include "main.h"
+
 /**
- * print_non_printable - Prints ascii codes in hexa of non printable chars
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width
- * @precision: Precision specification
- * @size: Size specifier
- * Return: Number of chars printed
+ * print_non_printable - ascii codes -> hex
+ * @types: arguments
+ * @buffer: Buffer
+ * @flags: active flags
+ * @width: width
+ * @precision: Precision - specification
+ * @size: Size
+ * Return: Characters
  */
-int print_non_printable(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
+
+int print_non_printable(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
-	int i = 0, offset = 0;
+	int i = 0;
+	int cuurent_nm = 0;
 	char *str = va_arg(types, char *);
 
 	UNUSED(flags);
@@ -26,14 +28,14 @@ int print_non_printable(va_list types, char buffer[],
 	while (str[i] != '\0')
 	{
 		if (is_printable(str[i]))
-			buffer[i + offset] = str[i];
+			buffer[i + cuurent_nm] = str[i];
 		else
-			offset += append_hexa_code(str[i], buffer, i + offset);
+			cuurent_nm += append_hexa_code(str[i], buffer, i + cuurent_nm);
 
 		i++;
 	}
 
-	buffer[i + offset] = '\0';
+	buffer[i + cuurent_nm] = '\0';
 
-	return (write(1, buffer, i + offset));
+	return (write(1, buffer, i + cuurent_nm));
 }

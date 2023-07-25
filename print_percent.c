@@ -1,16 +1,17 @@
 #include "main.h"
+
 /**
- * print_percent - Prints a percent sign
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width.
- * @precision: Precision specification
- * @size: Size specifier
- * Return: Number of chars printed
+ * print_percent - write % sign
+ * @types: arguments
+ * @buffer: Buffer
+ * @flags: active flags
+ * @width: width.
+ * @precision: precision - specification
+ * @size: Size
+ * Return: Characters
  */
-int print_percent(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
+
+int print_percent(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
 	UNUSED(types);
 	UNUSED(buffer);
@@ -18,5 +19,6 @@ int print_percent(va_list types, char buffer[],
 	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
+	
 	return (write(1, "%%", 1));
 }

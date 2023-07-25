@@ -1,16 +1,17 @@
 #include "main.h"
+
 /**
- * print_octal - Prints an unsigned number in octal notation
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width
- * @precision: Precision specification
- * @size: Size specifier
- * Return: Number of chars printed
+ * print_octal - unsigned number
+ * @types: arguments
+ * @buffer: Buffer
+ * @flags: active flags
+ * @width: width
+ * @precision: precision - specification
+ * @size: Size
+ * Return: Character
  */
-int print_octal(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
+
+int print_octal(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
 
 	int i = BUFF_SIZE - 2;
