@@ -9,7 +9,7 @@
 
 int get_flags(const char *format, int *i)
 {
-	int p; 
+	int p;
 	int current_i;
 	int flags = 0;
 	const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0', '!', '*', '*'};
