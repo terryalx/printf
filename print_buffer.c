@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
- * print_buffer - Prints the contents of the buffer if it exist
- * @buffer: Array of characters
- * @buff_ind: Index of nect char
+ * print_buffer - write out the contents of buffer if any
+ * @buffer: Array in buffer
+ * @buff_ind: Index
  */
+
 void print_buffer(char buffer[], int *buff_ind)
 {
 	if (*buff_ind > 0)
