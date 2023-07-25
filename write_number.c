@@ -1,18 +1,18 @@
 #include "main.h"
+
 /**
- * write_number - Prints a string
- * @is_negative: Lista of arguments
- * @ind: char types.
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width.
- * @precision: precision specifier
- * @size: Size specifier
- *
- * Return: Number of chars printed.
+ * write_number - prints string
+ * @is_negative: arguments
+ * @ind: type
+ * @buffer: Buffer
+ * @flags: active flags
+ * @width: width.
+ * @precision: precision - specifier
+ * @size: Size
+ * Return: Character
  */
-int write_number(int is_negative, int ind, char buffer[],
-	int flags, int width, int precision, int size)
+
+int write_number(int is_negative, int ind, char buffer[], int flags, int width, int precision, int size)
 {
 	int length = BUFF_SIZE - ind - 1;
 	char padd = ' ', extra_ch = 0;

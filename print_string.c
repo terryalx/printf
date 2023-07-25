@@ -1,18 +1,20 @@
 #include "main.h"
+
 /**
- * print_string - Prints a string
- * @types: List a of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width.
- * @precision: Precision specification
- * @size: Size specifier
- * Return: Number of chars printed
+ * print_string - writes a string
+ * @types: arguments
+ * @buffer: Buffer
+ * @flags: active flags
+ * @width: width.
+ * @precision: precision specification
+ * @size: Size
+ * Return: Characters
  */
-int print_string(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
+
+int print_string(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
-	int length = 0, i;
+	int length = 0;
+	int i;
 	char *str = va_arg(types, char *);
 
 	UNUSED(buffer);
