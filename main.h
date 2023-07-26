@@ -18,6 +18,11 @@
 #define S_LONG 2
 #define S_SHORT 1
 
+/**
+ * struct fmt - Struct opp.
+ * @fmt: -> format.
+ * @fn: -> function.
+ */
 struct fmt
 {
 	char fmt;
