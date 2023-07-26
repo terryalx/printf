@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_string - writes a string
  * @types: arguments
@@ -10,19 +9,17 @@
  * @size: Size
  * Return: Characters
  */
-
 int print_string(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
+		int flags, int width, int precision, int size)
 {
 	int length = 0;
-	int i;
 	char *str = va_arg(types, char *);
 
 	UNUSED(buffer);
 	UNUSED(flags);
-	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
+
 	if (str == NULL)
 	{
 		str = "(null)";
@@ -40,19 +37,17 @@ int print_string(va_list types, char buffer[],
 	{
 		if (flags & F_MINUS)
 		{
-			write(1, &str[0], length);
-			for (i = width - length; i > 0; i--)
-				write(1, " ", 1);
+			handle_left_padding(str, width, length, flags);
 			return (width);
 		}
 		else
 		{
-			for (i = width - length; i > 0; i--)
-				write(1, " ", 1);
-			write(1, &str[0], length);
+			handle_right_padding(str, width, length, flags);
 			return (width);
 		}
 	}
 
-	return (write(1, str, length));
+	write(1, str, length);
+	return (length);
 }
+

@@ -114,4 +114,8 @@ int write_with_width(char buffer[], int flags, int width);
 int handle_format(const char *format, va_list list,
 		char buffer[], int *buff_ind);
 
+static void handle_right_padding(char *str, int width, int length, int flags);
+
+static void handle_left_padding(char *str, int width, int length, int flags);
+
 #endif /* MAIN_H */
