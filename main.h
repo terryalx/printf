@@ -111,4 +111,7 @@ void print_buffer(char buffer[], int *buff_ind);
 
 int write_with_width(char buffer[], int flags, int width);
 
+int handle_format(const char *format, va_list list,
+		char buffer[], int *buff_ind);
+
 #endif /* MAIN_H */
