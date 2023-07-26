@@ -2,9 +2,13 @@
 
 /**
  * get_precision -> Number of precision
+ *
  * @format: Formatted string -> arguments
+ *
  * @i: arguments to be printed
+ *
  * @list: list of arguments
+ *
  * Return: (precision)
  */
 

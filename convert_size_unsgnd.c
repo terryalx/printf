@@ -1,9 +1,12 @@
 #include "main.h"
 
 /**
- * convert_size_unsgnd - Number -> specified size
+ *  convert_size_unsgnd - Number -> specified size
+ *
  * @num: The number
+ *
  * @size: Type
+ *
  * Return: num
  */
 

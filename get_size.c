@@ -2,8 +2,11 @@
 
 /**
  * get_size - size -> argument
+ *
  * @format: Formatted string
+ *
  * @i: arguments to be printed.
+ *
  * Return: (size).
  */
 

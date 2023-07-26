@@ -2,9 +2,13 @@
 
 /**
  * get_width - gets the width -> printing
+ *
  * @format: Formatted string
+ *
  * @i: arguments to be printed
+ *
  * @list: list of arguments
+ *
  * Return: (width)
  */
 

@@ -2,8 +2,11 @@
 
 /**
  * get_flags - gets active flags
+ *
  * @format: Formatted string
+ *
  * @i: parameter
+ *
  * Return: flags
  */
 
